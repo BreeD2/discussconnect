@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en-US">
+<html>
+ <head>
+   <title>Discuss & Connect: Where Conversations Unite</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+   <center>
+
+   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet"href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+</style>
+</head>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+</head>
+<body>
+
+
+
+
+ <div class="menu-content">
+  <ul class="menu">
+      <li id="menu-title"><img src="your-image-url.png" alt="My Website Logo"></li>
+       <li><a href="#home">Home</a></li>
+       <li><a href="#about">About</a></li>
+       <li><a href="#services">Services</a></li>
+       <li><a href="#contact">Contact</a></li>
+       <li class="menu-button"><a href="login/index.html">Login</a></li>
+       <li class="menu-button2"><a href="#signup">Signup</a></li>
+       <!-- Add more menu items as needed -->
+       <!-- Search bar within the menu -->
+       <li id="search-container">
+           <input type="text" id="search-bar" placeholder="Search...">
+       </li>
+       <!-- Login and Signup buttons -->
+
+
+   </ul>
+ </div>
+
+ <!-- The sidebar -->
+ <div class="sidebar">
+   <a class="active" href="#home">Home</a>
+   <a href="#news">News</a>
+   <a href="#contact">Contact</a>
+   <a href="#about">About</a>
+ </div>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="popup">
+    <!-- Magnifying Glass Icon Button -->
+    <button id="popup-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <g fill="none" fill-rule="evenodd">
+                <path d="M0 0h48v48H0z"/>
+                <path fill="#FFFFFF" d="M38.635 35.122l-8.136-8.136c-.464-.464-1.214-.464-1.678 0-.464.464-.464 1.214 0 1.678l8.136 8.136c.464.464 1.214.464 1.678 0 .464-.464.464-1.214 0-1.678zm-2.29-.088C33.573 34.453 32 30.89 32 26c0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12c-4.89 0-8.453-1.573-8.034-4.344z"/>
+            </g>
+        </svg>
+    </button>
+
+    <!-- Popup Content (Hidden by Default) -->
+    <div class="popup-content" id="popup-content">
+        <!-- HTML Code from Sidebar-Right -->
+        <div class="sidebar-right">
+            <!-- Accessibility buttons -->
+            <button class="accessibility-button" id="increase-font-btn">Increase Font</button>
+            <button class="accessibility-button" id="decrease-font-btn">Decrease Font</button>
+
+            <!-- Mode and Filter Buttons -->
+            <button id="toggle-mode-btn">Toggle Mode</button>
+            <button class="invert-btn">Invert</button>
+            <button id="brightnessUpBtn">Increase Brightness</button>
+            <button id="brightnessDownBtn">Decrease Brightness</button>
+            <button id="contrast-up-btn">Increase Contrast</button>
+            <button id="contrast-down-btn">Decrease Contrast</button>
+
+            <!-- Zoom Buttons -->
+            <button class="zoom-in-btn">Zoom In</button>
+            <button class="zoom-out-btn">Zoom Out</button>
+
+            <!-- Color Filter Buttons -->
+            <button class="filter-btn" data-filter="grayscale(100%)">Grayscale</button>
+            <button class="filter-btn" data-filter="sepia(100%)">Sepia</button>
+            <button class="filter-btn" data-filter="saturate(200%)">Saturate</button>
+            <button class="filter-btn" data-filter="hue-rotate(90deg)">Hue Rotate</button>
+            <button class="filter-btn red-green-filter">Red-Green Filter</button>
+            <button class="filter-btn red-green-filter" data-filter="hue-rotate(120deg)">Green-Red Filter</button>
+            <button class="filter-btn blue-yellow-filter">Blue/Yellow Filter</button>
+            <button class="tint-btn">Color Tint</button>
+            <button class="filter-btn" data-filter="blur(1px)">Blur</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Get the magnifying glass button and popup content
+const popupButton = document.getElementById('popup-button');
+const popupContent = document.getElementById('popup-content');
+const popupOpenButton = document.getElementById('popup-open-button');
+const popupCloseButton = document.getElementById('popup-close-button');
+
+// Add a click event listener to the magnifying glass button to open the popup
+popupButton.addEventListener('click', function() {
+    // Show the popup content
+    popupContent.classList.add('visible');
+});
+
+// Add a click event listener to the open button to open the popup
+popupOpenButton.addEventListener('click', function() {
+    // Show the popup content
+    popupContent.classList.add('visible');
+});
+
+// Add a click event listener to the close button to close the popup
+popupCloseButton.addEventListener('click', function() {
+    // Hide the popup content
+    popupContent.classList.remove('visible');
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Event listeners and other code here
+
+    // Function to change font size
+    function changeFontSize(action) {
+        // ... (rest of the code)
+    }
+
+    // Function to toggle mode (e.g., light/dark)
+    function toggleMode() {
+        // ... (rest of the code)
+    }
+
+    // Save settings
+    function saveSettings() {
+        // ... (rest of the code)
+    }
+
+    // Load settings from localStorage
+    function loadSettings() {
+        // ... (rest of the code)
+    }
+
+    // Event listeners
+    document.getElementById('increase-font-btn').addEventListener('click', () => changeFontSize('increase'));
+    document.getElementById('decrease-font-btn').addEventListener('click', () => changeFontSize('decrease'));
+    document.getElementById('toggle-mode-btn').addEventListener('click', toggleMode);
+    document.getElementById('save-settings').addEventListener('click', saveSettings);
+
+    // Load settings when the page loads
+    window.addEventListener('load', loadSettings);
+
+    // Function to display a confirmation message when settings are saved
+    function showSettingsSavedMessage() {
+        alert('Settings saved!');
+    }
+});
+</script>
+
+
+
+
+<!-- Page content -->
+<div class="content">
+
+</div>
+
+ <!-- Page content -->
+ <div class="content">
+   ..
+
+  <div class="content">
+      <!-- Your main content goes here -->
+      <h1>Welcome to My Website</h1>
+      <p>This is the main content of the webpage.</p>
+  </div>
+
+
+
+
+<div class="officialtitle">Discuss & Connect: Where Conversations Unite</div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const sidebar = document.getElementById("mySidebar");
+
+      // Toggle the sidebar when clicked
+      sidebar.addEventListener("click", function() {
+          sidebar.classList.toggle("active");
+      });
+  });
+
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const leftSidebar = document.getElementById("myLeftSidebar");
+    const rightSidebar = document.getElementById("myRightSidebar");
+
+    // Automatically make the left sidebar appear
+    leftSidebar.classList.add("active");
+
+    // Automatically make the right sidebar appear
+    rightSidebar.classList.add("active");
+});
+
+</script>
+
+<script>
+
+
+</script>
+
+<script>
+// Select the tint button
+const tintBtn = document.querySelector('.tint-btn');
+
+// Add a click event listener to the tint button
+tintBtn.addEventListener('click', function() {
+  // Toggle the color tint filter on the body element
+  document.body.classList.toggle('color-tint');
+});
+
+</script>
+
+<script>
+const myButton = document.querySelector(".red-green-filter");
+
+myButton.addEventListener("click", function() {
+  document.body.classList.toggle("red-green-filter-active");
+});
+
+
+</script>
+
+
+<script>
+const buttons = document.querySelectorAll('.buttons button');
+const blurButton = document.getElementById('blur-button');
+const img = document.querySelector('img');
+let currentFilter = '';
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    currentFilter = button.getAttribute('data-filter');
+    img.style.filter = currentFilter;
+  });
+});
+
+blurButton.addEventListener('click', () => {
+  img.style.filter = 'blur(5px)';
+});
+</script>
+
+<script>
+const opacityButton = document.querySelector('.opacity-btn');
+opacityButton.addEventListener('click', function() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.opacity = '0.5';
+});
+
+
+</script>
+
+
+
+<script>
+// Get the HTML element that you want to modify the contrast of
+const htmlElement = document.documentElement;
+
+// Get the buttons for increasing and decreasing contrast
+const contrastUpBtn = document.getElementById("contrast-up-btn");
+const contrastDownBtn = document.getElementById("contrast-down-btn");
+
+// Set up event listeners for the buttons
+contrastUpBtn.addEventListener("click", increaseContrast);
+contrastDownBtn.addEventListener("click", decreaseContrast);
+
+// Function to increase contrast
+function increaseContrast() {
+  htmlElement.style.filter = "contrast(1.5)";
+}
+
+// Function to decrease contrast
+function decreaseContrast() {
+  htmlElement.style.filter = "contrast(0.5)";
+}
+
+
+</script>
+
+<script>
+const blueYellowFilterButton = document.querySelector('.blue-yellow-filter');
+blueYellowFilterButton.addEventListener('click', function() {
+  const body = document.querySelector('body');
+  body.classList.toggle('blue-yellow-filter-active');
+});
+
+</script>
+
+
+
+
+<script>
+
+// Get the mode button element
+var modeButton = document.querySelector(".mode-btn");
+
+// Add event listener for the mode button
+modeButton.addEventListener("click", function() {
+  var body = document.querySelector("body");
+  body.classList.toggle("invert");
+
+  // Save the current mode to local storage
+  if (body.classList.contains("invert")) {
+    localStorage.setItem("mode", "dark");
+  } else {
+    localStorage.setItem("mode", "light");
+  }
+});
+
+// Check local storage for the current mode
+var mode = localStorage.getItem("mode");
+if (mode === "dark") {
+  document.body.classList.add("invert");
+} else if (mode === "light") {
+  document.body.classList.remove("invert");
+}
+</script>
+
+
+<script>
+// Get the brightness up button element
+var brightnessUpButton = document.getElementById("brightnessUpBtn");
+
+// Add event listener for the brightness up button
+brightnessUpButton.addEventListener("click", function() {
+  brightness += brightnessStep;
+  updateBrightness();
+});
+
+// Define the updateBrightness function
+function updateBrightness() {
+  document.body.style.filter = "brightness(" + brightness + "%)";
+}
+</script>
+
+
+
+
+<!-- Script -->
+<script>
+  // Brightness control variables
+  var brightness = 100;
+  var brightnessStep = 10;
+
+  // Brightness control functions
+  function increaseBrightness() {
+    brightness += brightnessStep;
+    updateBrightness();
+  }
+
+  function decreaseBrightness() {
+    brightness -= brightnessStep;
+    updateBrightness();
+  }
+
+  function updateBrightness() {
+    document.body.style.filter = "brightness(" + brightness + "%)";
+  }
+
+  // Add event listeners to brightness control buttons
+  document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
+  document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
+</script>
+
+
+<script>
+// Get the color filter buttons
+var filterButtons = document.querySelectorAll(".filter-btn");
+
+// Add a click event listener to each filter button
+filterButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    var body = document.querySelector("body");
+    var filter = this.getAttribute("data-filter");
+    body.style.filter = filter;
+  });
+});
+
+
+</script>
+
+
+
+
+
+<script>
+// Get the brightness button
+var brightnessButton = document.querySelector(".brightness-btn");
+
+// Add a click event listener to the button
+brightnessButton.addEventListener("click", function() {
+  // Get the body element
+  var body = document.querySelector("body");
+
+  // Get the current brightness value
+  var currentBrightness = parseFloat(window.getComputedStyle(body).getPropertyValue("filter").split("(")[1].split(")")[0]);
+
+  // Increase the brightness by 10%
+  var newBrightness = currentBrightness + 0.1;
+
+  // Set the new brightness value
+  body.style.filter = "brightness(" + newBrightness + ")";
+});
+</script>
+
+<script>
+// Get the zoom-in button
+var zoomInButton = document.querySelector(".zoom-in-btn");
+
+// Add a click event listener to the button
+zoomInButton.addEventListener("click", function() {
+  // Get the body element
+  var body = document.querySelector("body");
+
+  // Get the current zoom value
+  var currentZoom = parseFloat(window.getComputedStyle(body).getPropertyValue("zoom"));
+
+  // Increase the zoom by 10%
+  var newZoom = currentZoom + 0.1;
+
+  // Set the new zoom value
+  body.style.zoom = newZoom;
+});
+
+// Get the zoom-out button
+var zoomOutButton = document.querySelector(".zoom-out-btn");
+
+// Add a click event listener to the button
+zoomOutButton.addEventListener("click", function() {
+  // Get the body element
+  var body = document.querySelector("body");
+
+  // Get the current zoom value
+  var currentZoom = parseFloat(window.getComputedStyle(body).getPropertyValue("zoom"));
+
+  // Decrease the zoom by 10%
+  var newZoom = currentZoom - 0.1;
+
+  // Set the new zoom value
+  body.style.zoom = newZoom;
+});
+
+
+</script>
+
+<script>
+// Get the invert button
+var invertButton = document.querySelector(".invert-btn");
+
+// Add a click event listener to the button
+invertButton.addEventListener("click", function() {
+  // Get the body element
+  var body = document.querySelector("body");
+
+  // Toggle the invert filter
+  body.classList.toggle("invert");
+
+  // Update the button text
+  if (body.classList.contains("invert")) {
+    invertButton.textContent = "Uninvert";
+  } else {
+    invertButton.textContent = "Invert";
+  }
+});
+
+// Get the elements for increasing and decreasing font size
+const increaseFontBtn = document.getElementById('increase-font-btn');
+const decreaseFontBtn = document.getElementById('decrease-font-btn');
+
+// Set the initial font size
+let fontSize = 16; // You can adjust this to your default font size
+
+// Function to increase font size
+function increaseFontSize() {
+    fontSize += 2; // You can adjust the increment value
+    document.body.style.fontSize = fontSize + 'px';
+}
+
+// Function to decrease font size
+function decreaseFontSize() {
+    fontSize -= 2; // You can adjust the decrement value
+    document.body.style.fontSize = fontSize + 'px';
+}
+
+// Add click event listeners to the buttons
+increaseFontBtn.addEventListener('click', increaseFontSize);
+decreaseFontBtn.addEventListener('click', decreaseFontSize);
+
+</script>
+
+<script>r
+</script>

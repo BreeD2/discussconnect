@@ -1,0 +1,425 @@
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script", cursive;
+}
+.w3-bar, h1, button {
+  font-family: "Dancing Script", cursive;
+}
+.fa-anchor, .fa-coffee {
+  font-size: 200px;
+}
+menu {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+margin:100%;
+background-color: white;
+color: #000;
+
+}
+.officialtitle {
+  color:red;
+  font-size:40px;
+  margin-top: 5%;
+}
+
+ul.menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: #333; /* Background color for the menu bar */
+          overflow: hidden;
+      }
+
+      ul.menu li {
+          float: left;
+      }
+
+      ul.menu li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      ul.menu li a:hover {
+          background-color: #555; /* Background color for menu items on hover */
+      }
+
+      /* Style for the search bar */
+       #search-container {
+           float: right;
+           margin-right: 20px;
+           margin-top: 10px;
+       }
+
+       #search-bar {
+           padding: 5px;
+           border: none;
+           border-radius: 4px;
+       }
+       /* Style for the image title */
+      #menu-title {
+          float: left;
+          margin-left: 20px;
+          margin-top: 5px; /* Adjust the top margin to align with the menu items */
+      }
+
+
+      /* The side navigation menu */
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+
+      /* Sidebar links */
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      /* Active/current link */
+      .sidebar a.active {
+        background-color: black;
+        color: white;
+      }
+
+      /* Links on mouse-over */
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+      /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+      div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+      }
+
+      /* On screens that are less than 700px wide, make the sidebar into a topbar */
+      @media screen and (max-width: 700px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+      }
+
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
+        }
+      }
+
+      /* CSS for the sidebar on the right */
+      .sidebar-right {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          right: 0; /* Set it to the right */
+          overflow: auto;
+      }
+
+      /* Sidebar links */
+      .sidebar-right a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+      }
+
+      /* Active/current link */
+      .sidebar-right a.active {
+          background-color: black;
+          color: white;
+      }
+
+      /* Links on mouse-over */
+      .sidebar-right a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+      }
+
+      /* Adjust the margin-right property to match the sidebar's width property */
+      div.content {
+          margin-right: 200px; /* Match the width of the sidebar */
+          padding: 1px 16px;
+          height: 1000px;
+      }
+
+      /* On screens that are less than 700px wide, make the sidebar into a topbar */
+      @media screen and (max-width: 700px) {
+          .sidebar-right {
+              width: 100%;
+              height: auto;
+              position: relative;
+          }
+          .sidebar-right a {
+              float: left;
+          }
+          div.content {
+              margin-right: 0;
+          }
+      }
+
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+          .sidebar-right a {
+              text-align: center;
+              float: none;
+          }
+      }
+
+      /* Style for the accessibility buttons */
+.accessibility-button {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Adjust the margin-right property to match the sidebar's width property */
+div.content {
+    margin-right: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* Default color variables */
+:root {
+    --main-bg-color: #f1f1f1;
+    --main-text-color: black;
+}
+
+/* Light color scheme */
+.light-scheme {
+    --main-bg-color: #f1f1f1;
+    --main-text-color: black;
+}
+
+/* Dark color scheme */
+.dark-scheme {
+    --main-bg-color: #333;
+    --main-text-color: white;
+}
+
+/* Style for the right sidebar */
+.sidebar-right {
+    margin: 0;
+    padding: 20px;
+    width: 200px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    position: fixed;
+    height: 100%;
+    right: 0;
+    overflow: auto;
+}
+
+/* Style for the accessibility buttons */
+.accessibility-button {
+    display: block;
+    color: var(--main-text-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Style for the color scheme buttons */
+.color-scheme-button {
+    display: block;
+    color: var(--main-text-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.red-green-filter-active {
+  filter: sepia(100%) hue-rotate(-100deg) saturate(200%);
+}
+.button-blue-yellow {
+  filter: invert(75%) sepia(100%) saturate(400%) hue-rotate(195deg) brightness(1.2);
+}
+
+/* Sidebar Container */
+.sidebar-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    color: var(--main-text-color); /* Set your text color here */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align buttons to the right */
+    overflow: auto;
+}
+
+/* Accessibility Buttons */
+.accessibility-button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Mode Toggle Button */
+#toggle-mode-btn {
+    margin-top: 20px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Color and Filter Buttons */
+.filter-btn {
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Zoom Buttons */
+.zoom-in-btn,
+.zoom-out-btn {
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Font Size Buttons */
+#increase-font-btn,
+#decrease-font-btn {
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Button Hover Effect */
+.sidebar-right button:hover {
+    background-color: #555;
+}
+
+/* Active Button */
+.sidebar-right button.active {
+    background-color: black;
+    color: white;
+}
+
+/* Style for the right sidebar */
+.sidebar-right {
+    /* ... (existing styles) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center buttons vertically */
+}
+
+/* Button spacing */
+.sidebar-right button {
+    margin: 5px 0; /* Add vertical margin between buttons */
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    font-size: 24px;
+}
+
+/* Responsive Popup */
+@media screen and (max-width: 768px) {
+    .popup {
+        bottom: 10px;
+        right: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Initially hide the popup content */
+.popup-content {
+    display: none;
+}
+
+/* Show the popup content when the "visible" class is added */
+.popup-content.visible {
+    display: block;
+}

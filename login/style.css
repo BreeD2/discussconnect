@@ -1,0 +1,211 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script", cursive;
+}
+.w3-bar, h1, button {
+  font-family: "Dancing Script", cursive;
+}
+.fa-anchor, .fa-coffee {
+  font-size: 200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+menu {
+  display: none;
+}
+.login-container {
+    height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.officialtitle {
+  color:red;
+  font-size:40px;
+  margin-top: 5%;
+}
+
+ul.menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: #333; /* Background color for the menu bar */
+          overflow: hidden;
+      }
+
+      ul.menu li {
+          float: left;
+      }
+
+      ul.menu li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      ul.menu li a:hover {
+          background-color: #555; /* Background color for menu items on hover */
+      }
+
+      /* Style for the search bar */
+       #search-container {
+           float: right;
+           margin-right: 20px;
+           margin-top: 10px;
+       }
+
+       #search-bar {
+           padding: 5px;
+           border: none;
+           border-radius: 4px;
+       }
+       /* Style for the image title */
+      #menu-title {
+          float: left;
+          margin-left: 20px;
+          margin-top: 5px; /* Adjust the top margin to align with the menu items */
+      }
+
+
+      /* The side navigation menu */
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+
+      /* Sidebar links */
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      /* Active/current link */
+      .sidebar a.active {
+        background-color: black;
+        color: white;
+      }
+
+      /* Links on mouse-over */
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+          .sidebar-right a {
+              text-align: center;
+              float: none;
+          }
+      }
+
+      /* Style for the accessibility buttons */
+.accessibility-button {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Adjust the margin-right property to match the sidebar's width property */
+div.content {
+    margin-right: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* Default color variables */
+:root {
+    --main-bg-color: #f1f1f1;
+    --main-text-color: black;
+}
+
+/* Light color scheme */
+.light-scheme {
+    --main-bg-color: #f1f1f1;
+    --main-text-color: black;
+}
+
+/* Dark color scheme */
+.dark-scheme {
+    --main-bg-color: #333;
+    --main-text-color: white;
+}
+
+/* Style for the right sidebar */
+.sidebar-right {
+    margin: 0;
+    padding: 20px;
+    width: 200px;
+    background-color: black;
+    color: var(--main-text-color);
+    position: fixed;
+    height: 100%;
+    right: 0;
+    overflow: auto;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
