@@ -3,14 +3,53 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-color: #f0f0f0; /* Background color for the entire page */
-    color: #333; /* Text color */
+
+    color: ; /* Text color */
 }
 
 .menu-content {
     background-color: #333; /* Background color for the menu */
     color: #fff; /* Text color for the menu */
     padding: 10px;
+}
+
+/* Define the styles for the inverted colors */
+.invert {
+    filter: invert(100%);
+    background-color: #000; /* Background color for inverted content */
+    color: #fff; /* Text color for inverted content */
+}
+
+/* Inverted colors */
+body.invert {
+    background-color: black;
+    color: white; /* Inverted text color */
+}
+
+/* Default styles for light theme */
+body.light {
+    font-size: 16px;
+    color: black; /* Default text color for light theme */
+    background-color: white; /* Default background color for light theme */
+}
+
+/* Styles for dark theme */
+body.dark {
+    font-size: 16px;
+    color: white; /* Default text color for dark theme */
+    background-color: black; /* Default background color for dark theme */
+}
+
+
+
+#increase-font-btn {
+  visibility: collapse;
+
+}
+
+#decrease-font-btn {
+  visibility: collapse;
+
 }
 
 .menu {
@@ -51,6 +90,11 @@ h1 {
 
 label {
     font-weight: bold;
+    color:grey
+}
+
+p {
+  color:grey
 }
 
 select,
