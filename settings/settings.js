@@ -159,13 +159,11 @@ function toggleInvert() {
 }
 
 
-
 // Add a change event listener to the checkbox
 document.getElementById('invert-checkbox').addEventListener('change', toggleInvert);
 
 
 // Rest of your JavaScript code...
-
 // Function to change contrast
 function changeContrast(value) {
     const currentContrast = parseFloat(document.body.style.filter?.match(/contrast\((\d+)%\)/)?.[1] || 100);
@@ -248,6 +246,96 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Function to handle the click event of filter buttons
+function handleFilterButtonClick(event) {
+    const button = event.target;
+    const filterElement = document.getElementById('filter-element'); // Replace with your element ID
+    const filterValue = button.getAttribute('data-filter');
+
+    // Remove all custom filter classes from the filter element
+    filterElement.classList.remove('grayscale-filter', 'sepia-filter', 'saturate-filter', 'hue-rotate-filter', 'brightness-filter');
+
+    // Toggle the custom filter class for the clicked button
+    if (filterValue) {
+        filterElement.classList.toggle(filterValue);
+    }
+}
+
+// Add click event listeners to filter buttons
+const filterButtons = document.querySelectorAll('.filter-btn, .filter-btn2, .filter-btn3, .filter-btn4, .filter-btn5');
+filterButtons.forEach(button => {
+    button.addEventListener('click', handleFilterButtonClick);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to increase saturation
+    function increaseSaturation() {
+        const elements = document.querySelectorAll(".saturation");
+        elements.forEach(function (element) {
+            element.style.filter = "saturate(150%)"; // Increase the saturation to 150%
+        });
+    }
+
+    // Function to decrease saturation
+    function decreaseSaturation() {
+        const elements = document.querySelectorAll(".saturation");
+        elements.forEach(function (element) {
+            element.style.filter = "saturate(50%)"; // Decrease the saturation to 50%
+        });
+    }
+
+    // Attach click event listeners to the buttons
+    document.getElementById("increase-saturation-btn").addEventListener("click", increaseSaturation);
+    document.getElementById("decrease-saturation-btn").addEventListener("click", decreaseSaturation);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to apply the saturation effect
+    function applySaturation() {
+        const elements = document.querySelectorAll(".saturation");
+        elements.forEach(function (element) {
+            element.style.filter = "saturate(150%)"; // Apply the saturation effect
+        });
+    }
+
+    // Function to remove the saturation effect
+    function removeSaturation() {
+        const elements = document.querySelectorAll(".saturation");
+        elements.forEach(function (element) {
+            element.style.filter = "none"; // Remove the saturation effect
+        });
+    }
+
+    // Function to handle theme selection
+    function handleThemeSelection() {
+        const themeSelect = document.getElementById("theme");
+        const selectedTheme = themeSelect.value;
+
+        if (selectedTheme === "dark") {
+            applySaturation(); // Apply saturation for the "Dark" theme
+        } else {
+            removeSaturation(); // Remove saturation for the "Light" theme
+        }
+    }
+
+    // Function to handle invert colors selection
+    function handleInvertSelection() {
+        const invertSelect = document.getElementById("invert-select");
+        const selectedOption = invertSelect.value;
+
+        if (selectedOption === "yes") {
+            // Apply invert colors effect
+            document.body.classList.add("invert");
+        } else {
+            // Remove invert colors effect
+            document.body.classList.remove("invert");
+        }
+    }
+
+    // Attach event listeners
+    document.getElementById("theme").addEventListener("change", handleThemeSelection);
+    document.getElementById("invert-select").addEventListener("change", handleInvertSelection);
+});
 
 
 document.getElementById('save-settings').addEventListener('click', saveSettings);
