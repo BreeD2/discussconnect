@@ -1,71 +1,49 @@
-// Function to change font size
-function changeFontSize(action) {
-    const fontSizeElement = document.getElementById('font-size');
-    let currentSize = parseInt(fontSizeElement.value);
-
-    if (action === 'increase') {
-        currentSize += 2; // Increase font size by 2 units (adjust as needed)
-    } else if (action === 'decrease') {
-        currentSize -= 2; // Decrease font size by 2 units (adjust as needed)
-    }
-
-    // Set the new font size
-    document.body.style.fontSize = currentSize + 'px';
-    fontSizeElement.value = currentSize;
-
-    // Save settings when font size changes
-    saveSettings();
+// Function to change the font size
+function changeFontSize(fontSize) {
+    document.documentElement.style.fontSize = fontSize + 'px'; // Set font size for the entire document
 }
 
-// Function to toggle mode (e.g., light/dark)
-function toggleMode() {
-    const themeSelect = document.getElementById('theme');
-    const selectedTheme = themeSelect.value;
-
-    if (selectedTheme === 'light') {
-        document.body.classList.remove('dark-theme');
-    } else if (selectedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
+// Function to toggle the theme (light/dark)
+function toggleTheme(theme) {
+    const body = document.body;
+    if (theme === 'dark') {
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
     }
-
-    // Save settings when theme changes
-    saveSettings();
 }
 
-// Save settings
+// Function to save settings to local storage
 function saveSettings() {
-    const fontSizeElement = document.getElementById('font-size');
-    const themeSelect = document.getElementById('theme');
+    const fontSize = document.getElementById('font-size').value;
+    const theme = document.getElementById('theme').value;
 
-    // Save font size and theme settings to localStorage
-    localStorage.setItem('fontSize', fontSizeElement.value);
-    localStorage.setItem('theme', themeSelect.value);
+    // Save settings to local storage
+    localStorage.setItem('font-size', fontSize);
+    localStorage.setItem('theme', theme);
+
+    // Apply settings
+    changeFontSize(fontSize);
+    toggleTheme(theme);
+
+    alert('Settings saved!');
 }
 
-// Load settings from localStorage
-function loadSettings() {
-    const fontSizeElement = document.getElementById('font-size');
-    const themeSelect = document.getElementById('theme');
-
-    const savedFontSize = localStorage.getItem('fontSize');
+// Initialize settings based on local storage (if available)
+document.addEventListener('DOMContentLoaded', function () {
+    const savedFontSize = localStorage.getItem('font-size');
     const savedTheme = localStorage.getItem('theme');
 
     if (savedFontSize) {
-        fontSizeElement.value = savedFontSize;
-        document.body.style.fontSize = savedFontSize + 'px';
+        document.getElementById('font-size').value = savedFontSize;
+        changeFontSize(savedFontSize);
     }
 
     if (savedTheme) {
-        themeSelect.value = savedTheme;
-        toggleMode(); // Apply the saved theme
+        document.getElementById('theme').value = savedTheme;
+        toggleTheme(savedTheme);
     }
-}
+});
 
-// Event listeners
-document.getElementById('increase-font-btn').addEventListener('click', () => changeFontSize('increase'));
-document.getElementById('decrease-font-btn').addEventListener('click', () => changeFontSize('decrease'));
-document.getElementById('toggle-mode-btn').addEventListener('change', toggleMode); // Use 'change' event for select
+// Add click event listener for "Save Settings" button
 document.getElementById('save-settings').addEventListener('click', saveSettings);
-
-// Load settings when the page loads
-window.addEventListener('load', loadSettings);
