@@ -158,43 +158,95 @@ function toggleInvert() {
     localStorage.setItem('invert', isInvert ? 'true' : 'false');
 }
 
+
+
 // Add a change event listener to the checkbox
 document.getElementById('invert-checkbox').addEventListener('change', toggleInvert);
 
 
 // Rest of your JavaScript code...
 
-// Function to toggle between light and dark themes
-function toggleTheme() {
-    const body = document.body;
-    const themeSelect = document.getElementById('theme');
-    const theme = themeSelect.value;
+// Function to change contrast
+function changeContrast(value) {
+    const currentContrast = parseFloat(document.body.style.filter?.match(/contrast\((\d+)%\)/)?.[1] || 100);
+    const newContrast = currentContrast + value;
 
-    // Determine the background and text colors based on the selected theme
-    let backgroundColor, textColor;
-
-    if (theme === 'dark') {
-        backgroundColor = 'black'; // Dark background
-        textColor = 'white'; // Light text on dark background
-    } else {
-        backgroundColor = 'white'; // Light background
-        textColor = 'black'; // Dark text on light background
+    // Ensure contrast stays within a valid range (0% to 200%)
+    if (newContrast >= 0 && newContrast <= 200) {
+        document.body.style.filter = `contrast(${newContrast}%)`;
+        localStorage.setItem('contrast', newContrast);
     }
-
-    // Apply the background and text colors to the body
-    body.style.backgroundColor = backgroundColor;
-    body.style.color = textColor;
-
-    // Update the theme in local storage
-    localStorage.setItem('theme', theme);
 }
 
-// Rest of your code...
+// Function to change saturation
+function changeSaturation(value) {
+    const currentSaturation = parseFloat(document.body.style.filter?.match(/saturate\((\d+)%\)/)?.[1] || 100);
+    const newSaturation = currentSaturation + value;
 
+    // Ensure saturation stays within a valid range (0% to 200%)
+    if (newSaturation >= 0 && newSaturation <= 200) {
+        document.body.style.filter = `saturate(${newSaturation}%)`;
+        localStorage.setItem('saturation', newSaturation);
+    }
+}
 
+// Function to change blur
+function changeBlur(value) {
+    const currentBlur = parseFloat(document.body.style.filter?.match(/blur\((\d+)px\)/)?.[1] || 0);
+    const newBlur = currentBlur + value;
 
+    // Ensure blur stays within a valid range (0px to 10px)
+    if (newBlur >= 0 && newBlur <= 10) {
+        document.body.style.filter = `blur(${newBlur}px)`;
+        localStorage.setItem('blur', newBlur);
+    }
+}
 
+// Add event listeners to the contrast buttons
+document.getElementById('contrast-up-btn').addEventListener('click', function () {
+    changeContrast(10); // Increase contrast by 10%
+});
 
+document.getElementById('contrast-down-btn').addEventListener('click', function () {
+    changeContrast(-10); // Decrease contrast by 10%
+});
+
+// Add event listeners to the saturation buttons
+document.getElementById('saturation-up-btn').addEventListener('click', function () {
+    changeSaturation(10); // Increase saturation by 10%
+});
+
+document.getElementById('saturation-down-btn').addEventListener('click', function () {
+    changeSaturation(-10); // Decrease saturation by 10%
+});
+
+// Add event listeners to the blur buttons
+document.getElementById('blur-up-btn').addEventListener('click', function () {
+    changeBlur(1); // Increase blur by 1px
+});
+
+document.getElementById('blur-down-btn').addEventListener('click', function () {
+    changeBlur(-1); // Decrease blur by 1px
+});
+
+// Initialize settings based on local storage (if available)
+document.addEventListener('DOMContentLoaded', function () {
+    const savedContrast = localStorage.getItem('contrast');
+    const savedSaturation = localStorage.getItem('saturation');
+    const savedBlur = localStorage.getItem('blur');
+
+    if (savedContrast) {
+        document.body.style.filter = `contrast(${savedContrast}%)`;
+    }
+
+    if (savedSaturation) {
+        document.body.style.filter = `saturate(${savedSaturation}%)`;
+    }
+
+    if (savedBlur) {
+        document.body.style.filter = `blur(${savedBlur}px)`;
+    }
+});
 
 
 

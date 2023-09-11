@@ -97,6 +97,14 @@ p {
   color:grey
 }
 
+#saturation-up-btn {
+  visibility: hidden;
+}
+
+#saturation-down-btn {
+  visibility: hidden;
+}
+
 select,
 input[type="number"] {
     width: 100px;
