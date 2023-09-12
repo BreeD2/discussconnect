@@ -1,0 +1,159 @@
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script", cursive;
+}
+.w3-bar, h1, button {
+  font-family: "Dancing Script", cursive;
+}
+.fa-anchor, .fa-coffee {
+  font-size: 200px;
+}
+menu {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+margin:100%;
+background-color: white;
+color: #000;
+
+}
+.officialtitle {
+  color:red;
+  font-size:40px;
+  margin-top: 5%;
+}
+
+ul.menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: #333; /* Background color for the menu bar */
+          overflow: hidden;
+      }
+
+      ul.menu li {
+          float: left;
+      }
+
+      ul.menu li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      ul.menu li a:hover {
+          background-color: #555; /* Background color for menu items on hover */
+      }
+
+      /* Style for the search bar */
+       #search-container {
+           float: right;
+           margin-right: 20px;
+           margin-top: 10px;
+       }
+
+       #search-bar {
+           padding: 5px;
+           border: none;
+           border-radius: 4px;
+       }
+
+       /* Add CSS styles to make form fields display vertically */
+       form {
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+              padding-right: 10px;
+                 padding-left: 10px;
+       }
+
+       label {
+           margin-bottom: 10px;
+           text-align: center;
+           margin-right: 50%;
+       }
+
+       input[type="text"],
+       input[type="email"],
+       input[type="password"] {
+           width: 100%;
+           padding: 10px;
+           margin-bottom: 15px;
+       }
+
+       label {
+          margin-bottom: 10px;
+          text-align: center; /* Center-align the label text */
+      }
+
+       button {
+           width: auto;
+       }
+
+       form-label {
+              margin-bottom: 10px;
+              text-align: center; /* Center-align the label text */
+          }
+
+          p {
+            color:black
+          }
+
+       h1{
+         margin-bottom: 15%;
+         color:black
+       }
+
+       /* Add CSS styles to center-align text within the container */
+       /* Style for the "Sign Up" button */
+      .signup-button {
+          background-color: #007BFF; /* Button background color */
+          color: #fff; /* Button text color */
+          border: none; /* Remove button border */
+          padding: 10px 20px; /* Adjust padding as needed */
+          cursor: pointer; /* Add pointer cursor on hover */
+          border-radius: 5px; /* Add rounded corners */;
+          margin-top: 5%;
+          width:100%;
+      }
+
+      .signup-button:hover {
+          background-color: #0056b3; /* Change button color on hover */;
+              width:100%;
+                margin-top: 5%;
+      }
+              /* Add additional styles for form elements */
+              form {
+                  display: inline-block;
+                  text-align: left;
+              }
+
+              label {
+                  text-align: center; /* Center-align the label text */
+              }
+
+              input[type="text"],
+              input[type="email"],
+              input[type="password"] {
+                  width: 100%;
+                  padding: 10px;
+                  margin-bottom: 15px;
+              }
+
+              button {
+                  width: auto;
+              }
+
+              /* Center-align text above labels */
+        .text-above-label {
+            text-align: center;
+            margin-bottom: 10px;
+        }

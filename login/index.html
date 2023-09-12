@@ -11,6 +11,11 @@
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
  <script src="settings.js"></script> <!-- Include the shared settings.js file -->
 <style>
 </style>
@@ -23,11 +28,11 @@
  <div class="menu-content">
   <ul class="menu">
       <li id="menu-title"><img src="your-image-url.png" alt="My Website Logo"></li>
-       <li><a href="#home">Home</a></li>
-       <li><a href="#about">About</a></li>
+       <li><a href="..//index.html">Home</a></li>
+       <li><a href="..//about//index.html">About</a></li>
        <li><a href="#services">Services</a></li>
        <li><a href="#contact">Contact</a></li>
-       <li class="menu-button"><a href="login/index.html">Login</a></li>
+       <li class="menu-button"><a href="index.html">Login</a></li>
        <li class="menu-button2"><a href="#signup">Signup</a></li>
        <!-- Add more menu items as needed -->
        <!-- Search bar within the menu -->
@@ -47,19 +52,21 @@
    <a href="#contact">Contact</a>
    <a href="#about">About</a>
  </div>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-        </form>
-        <p id="error-message" class="error-message"></p>
-    </div>
+ <div class="login-container">
+     <h1>Login</h1>
+     <form id="login-form" action="process-login.php" method="post">
+         <label for="username">Username:</label>
+         <input type="text" id="username" name="username" required>
+
+         <label for="password">Password:</label>
+         <input type="password" id="password" name="password" required>
+<br>
+         <button type="submit">Login</button>
+     </form>
+
+
+ </div>
+
     <script src="script.js"></script>
 </body>
 </html>

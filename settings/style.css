@@ -177,6 +177,10 @@ body.dark {
     color: #fff;
 }
 
+#invert-select {
+  margin-right: 3%;
+}
+
 .menu a:hover {
     text-decoration: underline;
 }

@@ -72,17 +72,26 @@ ul.menu {
           margin-top: 5px; /* Adjust the top margin to align with the menu items */
       }
 
-
-      /* The side navigation menu */
-      .sidebar {
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        overflow: auto;
+      /* styles.css */
+      #sidebar {
+          width: 250px;
+          background-color: #f0f0f0;
+          padding: 20px;
+          position: fixed; /* Keeps the sidebar fixed while scrolling */
+          top: 0;
+          left: 0;
+          height: 100%; /* Make it full height */
       }
+
+      .category-list {
+          margin-bottom: 20px;
+      }
+
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+
 
       /* Sidebar links */
       .sidebar a {
@@ -419,7 +428,405 @@ div.content {
     display: none;
 }
 
-/* Show the popup content when the "visible" class is added */
-.popup-content.visible {
+/* Style the main content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* styles.css */
+
+
+
+h1 {
+    text-align: center;
+}
+
+.post-form {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+
+}
+
+.post-list {
+    border-top: 1px solid #ccc;
+}
+
+.post {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.likes, .dislikes {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.likes:hover, .dislikes:hover {
+    text-decoration: underline;
+}
+
+/* ... (previous code) ... */
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ... (previous code) ... */
+
+
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .forum-post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .post-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .post-content {
+            font-size: 16px;
+        }
+
+        .post-author {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Default style for big screens (automatically shown) */
+.category-sidebar {
     display: block;
 }
+
+/* Style for small screens (hidden by default) */
+@media screen and (max-width: 768px) {
+    .category-sidebar {
+        display: none;
+    }
+}
+
+/* Reset some default styles for better consistency */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Basic styling for the layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.chat-messages {
+    overflow-y: auto;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Reset some default styles for better consistency */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Make the layout fill the whole screen */
+html, body, .container {
+    height: 100%;
+}
+
+/* Basic styling for the layout */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    flex: 1; /* Adjust the width as needed */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3; /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#span {
+  color:white
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  /* style.css */
+#show-categories {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+
+}
+
+#show-categories i.fa {
+           margin-left: 5px; /* Add some spacing between the icon and text */
+       }
+
+
+
+
+             #span {
+               color:red
+             }
+             /* Styling for the button */
+      #show-categories-button {
+          cursor: pointer;
+          text-decoration: none;
+          background-color: #e0e0e0;
+          border: none;
+          display: inline-flex;
+          align-items: center; /* Center icon and text vertically */
+          padding: 5px 10px; /* Adjust padding as needed */
+      }
+
+      /* Styling for the icon within the button */
+      #show-categories-button i.fa {
+          color: red;
+          margin-right: 5px; /* Add some spacing between the icon and text */
+      }
+
+#mySidenav {
+  color: red !important; /* Change the text color to red */
+}
+
+      /* Styling for the community list */
+   .community-list {
+       list-style: none;
+       padding: 0;
+       color:white;
+          background-color: white
+   }
+   .namec {
+     font-size: 20px;
+     color:red
+   }
+a {
+  color:red
+}
+   /* Styling for each community item */
+   .community-item {
+       display: flex;
+       align-items: center;
+       margin-bottom: 10px;
+       color:white;
+          background-color: white
+   }
+
+   /* Styling for the community icon */
+   .community-icon {
+       font-size: 24px; /* Adjust the icon size as needed */
+       margin-right: 10px; /* Add spacing between the icon and text */;
+       color:white;
+       background-color: white
+   }
+
+   /* Dropup Button */
+   .dropbtn {
+     background-color: #3498DB;
+     color: white;
+     padding: 16px;
+     font-size: 16px;
+     border: none;
+   }
+
+   /* The container <div> - needed to position the dropup content */
+   .dropup {
+     position: relative;
+     display: inline-block;
+   }
+
+   /* Dropup content (Hidden by Default) */
+   .dropup-content {
+     display: none;
+     position: absolute;
+     bottom: 50px;
+     background-color: #f1f1f1;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+
+   /* Links inside the dropup */
+   .dropup-content a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+   }
+
+   /* Change color of dropup links on hover */
+   .dropup-content a:hover {background-color: #ddd}
+
+   /* Show the dropup menu on hover */
+   .dropup:hover .dropup-content {
+     display: block;
+   }
+
+   /* Change the background color of the dropup button when the dropup content is shown */
+   .dropup:hover .dropbtn {
+     background-color: #2980B9;
+   }

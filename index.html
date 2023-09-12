@@ -5,6 +5,7 @@
    <title>Discuss & Connect: Where Conversations Unite</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
    <center>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -49,14 +50,90 @@
    </ul>
  </div>
 
- <!-- The sidebar -->
- <div class="sidebar">
-   <a class="active" href="#home">Home</a>
-   <a href="#news">News</a>
-   <a href="#contact">Contact</a>
-   <a href="#about">About</a>
+ <div id="mySidenav" class="sidenav"style="color:white;background-color:darkblue">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"style="color:white">&times;</a>
+   <div class="namec"style="color:white;font-size:20px;:">Categories</div>
+   <ul class="community-list"style="color:white">
+           <li class="community-item"style="color:white;font-size:16px;">
+               <a href="global_community.html"style="color:white;font-size:16px;">
+                   <i class="fa fa-globe community-icon"></i> Global Community
+               </a>
+           </li>
+           <li class="community-item"style="color:white">
+               <a href="local_community.html"style="color:white;font-size:16px;">
+                   <i class="fa fa-users community-icon"></i> Local Community
+               </a>
+           </li>
+           <li class="community-item">
+               <a href="health_wellness.html"style="color:white;font-size:16px;">
+                   <i class="fa fa-heart community-icon"></i> Health & Wellness
+               </a>
+           </li>
+           <li class="community-item">
+            <a href="technology.html"style="color:white;font-size:16px;">
+                <i class="fa fa-laptop community-icon"></i> Technology
+            </a>
+        </li>
+        <li class="community-item">
+            <a href="sports.html"style="color:white;font-size:16px;"style="color:white;font-size:16px;">
+                <i class="fa fa-futbol community-icon"></i> Sports
+            </a>
+        </li>
+        <li class="community-item">
+            <a href="entertainment.html"style="color:white;font-size:16px;">
+                <i class="fa fa-film community-icon"></i> Entertainment
+            </a>
+        </li>
+        <li class="community-item">
+            <a href="general.html"style="color:white;font-size:16px;">
+                <i class="fa fa-globe community-icon"></i> General
+            </a>
+           <!-- Add more community items as needed with appropriate href attributes -->
+       </ul>
 
  </div>
+
+ <!-- Use any element to open the sidenav -->
+ <button id="show-categories-button" onclick="openNav()">
+        <i class="fa fa-globe"></i> Browse Categories
+    </button>
+
+
+ <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+ <div id="main">
+
+
+<script>
+function openNav() {
+           // Your code to open the navigation menu goes here
+           alert("Navigation menu opened!");
+       }
+     </script>
+
+<script>
+$(document).ready(function () {
+    // Hamburger icon click event
+    $("#hamburger-icon").click(function () {
+        $(".category-sidebar").slideToggle(); // Toggle the sidebar visibility
+    });
+});
+</script>
+
+    <div class="container">
+         <h2>Latest Forum Posts</h2>
+         <div class="forum-post">
+             <h3 class="post-title">How to get started with our community?</h3>
+             <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida libero a libero sodales, quis laoreet mi finibus.</p>
+             <p class="post-author">Posted by: JohnDoe</p>
+         </div>
+         <div class="forum-post">
+             <h3 class="post-title">Best practices for online discussions</h3>
+             <p class="post-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+             <p class="post-author">Posted by: JaneSmith</p>
+         </div>
+</div>
+
+
 
 
 
@@ -106,6 +183,101 @@
         </div>
     </div>
 </div>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #ccc}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
+</style>
+</head>
+<body style="background-color:white;">
+
+<h2>Hoverable Dropup</h2>
+<p>Example text...</p>
+<p>Example text...</p>
+<p>Move the mouse over the button to open the dropup menu.</p>
+
+<div class="dropup">
+    <button class="dropbtn">Accessibility Options</button>
+    <div class="dropup-content">
+        <button class="accessibility-button" id="increase-font-btn">Increase Font</button>
+        <button class="accessibility-button" id="decrease-font-btn">Decrease Font</button>
+        <button class="accessibility-button" id="toggle-mode-btn">Toggle Mode</button>
+        <button class="accessibility-button" id="invert-btn">Invert</button>
+        <button class="accessibility-button" id="brightnessUpBtn">Increase Brightness</button>
+        <button class="accessibility-button" id="brightnessDownBtn">Decrease Brightness</button>
+        <button class="accessibility-button" id="contrast-up-btn">Increase Contrast</button>
+        <button class="accessibility-button" id="contrast-down-btn">Decrease Contrast</button>
+        <button class="accessibility-button" id="zoom-in-btn">Zoom In</button>
+        <button class="accessibility-button" id="zoom-out-btn">Zoom Out</button>
+        <button class="accessibility-button" id="grayscale-filter-btn" data-filter="grayscale(100%)">Grayscale</button>
+        <button class="accessibility-button" id="sepia-filter-btn" data-filter="sepia(100%)">Sepia</button>
+        <button class="accessibility-button" id="saturate-filter-btn" data-filter="saturate(200%)">Saturate</button>
+        <button class="accessibility-button" id="hue-rotate-filter-btn" data-filter="hue-rotate(90deg)">Hue Rotate</button>
+        <button class="accessibility-button red-green-filter" id="red-green-filter-btn">Red-Green Filter</button>
+        <button class="accessibility-button red-green-filter" id="green-red-filter-btn" data-filter="hue-rotate(120deg)">Green-Red Filter</button>
+        <button class="accessibility-button blue-yellow-filter" id="blue-yellow-filter-btn">Blue/Yellow Filter</button>
+        <button class="accessibility-button" id="color-tint-btn">Color Tint</button>
+        <button class="accessibility-button" id="blur-filter-btn" data-filter="blur(1px)">Blur</button>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
 
 <script>
 // Get the magnifying glass button and popup content
@@ -177,25 +349,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- Page content -->
-<div class="content">
+<main>
+       <section>
+         <div class="category-list">
+      <h2>Choose a Category</h2>
+      <ul id="categories">
 
-</div>
-
- <!-- Page content -->
- <div class="content">
-   ..
-
-  <div class="content">
-      <!-- Your main content goes here -->
-      <h1>Welcome to My Website</h1>
-      <p>This is the main content of the webpage.</p>
+      </ul>
   </div>
+  <div id="selected-category">
+      <h3>Selected Category:</h3>
+      <p id="selected-category-name">No category selected</p>
+       </section>
+   </main>
+
+   <footer>
+       &copy; 2023 Discuss & Connect: Where Conversations Unite
+   </footer>
 
 
 
+<script>
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryList = document.getElementById('categories');
+    const selectedCategory = document.getElementById('selected-category-name');
 
-<div class="officialtitle">Discuss & Connect: Where Conversations Unite</div>
+    function handleCategorySelection(event) {
+        if (event.target && event.target.tagName === 'LI') {
+            const categoryName = event.target.getAttribute('data-category');
+            selectedCategory.textContent = categoryName;
+        }
+    }
+
+    categoryList.addEventListener('click', handleCategorySelection);
+});
+
+</script>
+
 
   <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -392,6 +583,21 @@ function updateBrightness() {
   document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
 </script>
 
+<script>
+const forumData = [
+    {
+        title: "How to get started with our community?",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida libero a libero sodales, quis laoreet mi finibus.",
+        author: "JohnDoe"
+    },
+    {
+        title: "Best practices for online discussions",
+        content: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        author: "JaneSmith"
+    },
+    // Add more forum posts here
+];
+</script>
 
 <script>
 // Get the color filter buttons
@@ -518,5 +724,298 @@ decreaseFontBtn.addEventListener('click', decreaseFontSize);
 
 </script>
 
-<script>r
+<script>
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryList = document.getElementById('categories');
+    const selectedCategory = document.getElementById('selected-category-name');
+    const sidebar = document.querySelector('.sidebar');
+    const hamburger = document.querySelector('.hamburger');
+
+    function handleCategorySelection(event) {
+        if (event.target && event.target.tagName === 'LI') {
+            const categoryName = event.target.getAttribute('data-category');
+            selectedCategory.textContent = categoryName;
+        }
+    }
+
+    categoryList.addEventListener('click', handleCategorySelection);
+
+    // Toggle sidebar on/off for smaller screens
+    hamburger.addEventListener('click', function () {
+        sidebar.classList.toggle('active');
+    });
+});
+
+</script>
+
+<script>
+// Get the sidebar and sidebar icon elements
+const sidebar = document.getElementById('sidebar');
+const sidebarIcon = document.getElementById('sidebar-icon');
+
+// Toggle the sidebar when the icon is clicked
+sidebarIcon.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+// Hide the sidebar initially on small screens
+if (window.innerWidth <= 768) {
+    sidebar.classList.add('hidden');
+}
+</script>
+
+<script>
+// Sample data (you would fetch this from a server in a real application)
+const posts = [
+    { id: 1, content: 'This is the first post', likes: 5, dislikes: 2 },
+    { id: 2, content: 'Another post here', likes: 10, dislikes: 1 },
+    // Add more posts here
+];
+
+// Function to render posts
+function renderPosts() {
+    const postList = document.getElementById('post-list');
+    postList.innerHTML = '';
+
+    posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.innerHTML = `
+            <p>${post.content}</p>
+            <div class="actions">
+                <span class="likes" data-id="${post.id}">Like (${post.likes})</span>
+                <span class="dislikes" data-id="${post.id}">Dislike (${post.dislikes})</span>
+            </div>
+        `;
+
+        // Attach event listeners for like and dislike
+        postDiv.querySelector('.likes').addEventListener('click', () => handleLike(post.id));
+        postDiv.querySelector('.dislikes').addEventListener('click', () => handleDislike(post.id));
+
+        postList.appendChild(postDiv);
+    });
+}
+
+// Function to handle liking a post
+function handleLike(postId) {
+    // Update the likes count for the post with the given ID
+    const post = posts.find(post => post.id === postId);
+    if (post) {
+        post.likes++;
+        renderPosts();
+    }
+}
+
+// Function to handle disliking a post
+function handleDislike(postId) {
+    // Update the dislikes count for the post with the given ID
+    const post = posts.find(post => post.id === postId);
+    if (post) {
+        post.dislikes++;
+        renderPosts();
+    }
+}
+
+// Attach event listener for posting
+document.getElementById('post-button').addEventListener('click', () => {
+    const postContent = document.getElementById('post-content').value;
+    if (postContent) {
+        // Create a new post and add it to the list (you would typically send this data to a server)
+        const newPost = {
+            id: posts.length + 1,
+            content: postContent,
+            likes: 0,
+            dislikes: 0,
+        };
+        posts.push(newPost);
+        renderPosts();
+
+        // Clear the textarea
+        document.getElementById('post-content').value = '';
+    }
+});
+
+// Initial rendering of posts
+renderPosts();
+</script>
+
+<script>
+// Sample data (you would fetch this from a server in a real application)
+const posts = [
+    { id: 1, content: 'This is the first post', likes: 5, dislikes: 2 },
+    { id: 2, content: 'Another post here', likes: 10, dislikes: 1 },
+    // Add more posts here
+];
+
+// Object to track user reactions for each post
+const userReactions = {};
+
+// Function to render posts
+function renderPosts() {
+    const postList = document.getElementById('post-list');
+    postList.innerHTML = '';
+
+    posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.innerHTML = `
+            <p>${post.content}</p>
+            <div class="actions">
+                <span class="likes" data-id="${post.id}">Like (${post.likes})</span>
+                <span class="dislikes" data-id="${post.id}">Dislike (${post.dislikes})</span>
+            </div>
+        `;
+
+        // Attach event listeners for like and dislike
+        const likeButton = postDiv.querySelector('.likes');
+        const dislikeButton = postDiv.querySelector('.dislikes');
+
+        likeButton.addEventListener('click', () => handleReaction(post.id, 'like', likeButton, dislikeButton));
+        dislikeButton.addEventListener('click', () => handleReaction(post.id, 'dislike', likeButton, dislikeButton));
+
+        postList.appendChild(postDiv);
+    });
+}
+
+// Function to handle user reactions (like/dislike)
+function handleReaction(postId, reactionType, likeButton, dislikeButton) {
+    if (!userReactions[postId]) {
+        // User has not reacted to this post, set their reaction
+        const post = posts.find(post => post.id === postId);
+        if (post) {
+            userReactions[postId] = reactionType;
+            if (reactionType === 'like') {
+                post.likes++;
+                likeButton.textContent = `Like (${post.likes})`;
+                likeButton.style.color = 'green';
+                dislikeButton.style.color = '';
+            } else if (reactionType === 'dislike') {
+                post.dislikes++;
+                dislikeButton.textContent = `Dislike (${post.dislikes})`;
+                dislikeButton.style.color = 'red';
+                likeButton.style.color = '';
+            }
+        }
+    } else if (userReactions[postId] !== reactionType) {
+        // User is switching their reaction from like to dislike or vice versa
+        const post = posts.find(post => post.id === postId);
+        if (post) {
+            if (userReactions[postId] === 'like') {
+                post.likes--;
+            } else if (userReactions[postId] === 'dislike') {
+                post.dislikes--;
+            }
+            userReactions[postId] = reactionType;
+            if (reactionType === 'like') {
+                post.likes++;
+                likeButton.textContent = `Like (${post.likes})`;
+                likeButton.style.color = 'green';
+                dislikeButton.textContent = `Dislike (${post.dislikes})`;
+                dislikeButton.style.color = '';
+            } else if (reactionType === 'dislike') {
+                post.dislikes++;
+                dislikeButton.textContent = `Dislike (${post.dislikes})`;
+                dislikeButton.style.color = 'red';
+                likeButton.textContent = `Like (${post.likes})`;
+                likeButton.style.color = '';
+            }
+        }
+    } else if (userReactions[postId] === reactionType) {
+        // User is removing their reaction
+        const post = posts.find(post => post.id === postId);
+        if (post) {
+            if (userReactions[postId] === 'like') {
+                post.likes--;
+                likeButton.textContent = `Like (${post.likes})`;
+                likeButton.style.color = '';
+            } else if (userReactions[postId] === 'dislike') {
+                post.dislikes--;
+                dislikeButton.textContent = `Dislike (${post.dislikes})`;
+                dislikeButton.style.color = '';
+            }
+            userReactions[postId] = null;
+        }
+    }
+}
+
+// Attach event listener for posting
+document.getElementById('post-button').addEventListener('click', () => {
+    const postContent = document.getElementById('post-content').value;
+    if (postContent) {
+        // Create a new post and add it to the list (you would typically send this data to a server)
+        const newPost = {
+            id: posts.length + 1,
+            content: postContent,
+            likes: 0,
+            dislikes: 0,
+        };
+        posts.push(newPost);
+        renderPosts();
+
+        // Clear the textarea
+        document.getElementById('post-content').value = '';
+    }
+});
+
+// Initial rendering of posts
+renderPosts();
+
+</script>
+
+<script>
+// ... (previous code) ...
+
+// Sample user profile pictures (you would fetch this from a server in a real application)
+const profilePictures = {
+    1: 'profile1.jpg',
+    2: 'profile2.jpg',
+    // Add more profile pictures here
+};
+
+// Function to render posts
+function renderPosts() {
+    const postList = document.getElementById('post-list');
+    postList.innerHTML = '';
+
+    posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.innerHTML = `
+            <div class="profile-icon">
+                <img src="${profilePictures[post.id]}" alt="Profile Picture">
+            </div>
+            <div class="post-content">
+                <p>${post.content}</p>
+                <div class="actions">
+                    <span class="likes" data-id="${post.id}">Like (${post.likes})</span>
+                    <span class="dislikes" data-id="${post.id}">Dislike (${post.dislikes})</span>
+                </div>
+            </div>
+        `;
+
+        // Attach event listeners for like and dislike
+        const likeButton = postDiv.querySelector('.likes');
+        const dislikeButton = postDiv.querySelector('.dislikes');
+
+        likeButton.addEventListener('click', () => handleReaction(post.id, 'like', likeButton, dislikeButton));
+        dislikeButton.addEventListener('click', () => handleReaction(post.id, 'dislike', likeButton, dislikeButton));
+
+        postList.appendChild(postDiv);
+    });
+}
+
+// ... (previous code) ...
+</script>
+
+<script>
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 </script>
