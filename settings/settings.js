@@ -36,14 +36,6 @@ function changeFontSize(amount) {
     }
 }
 
-// Add event listeners to the font size buttons
-document.getElementById('increase-font-btn').addEventListener('click', function () {
-    changeFontSize(5); // Increase font size by 5 units
-});
-
-document.getElementById('decrease-font-btn').addEventListener('click', function () {
-    changeFontSize(-5); // Decrease font size by 5 units
-});
 
 
 
