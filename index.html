@@ -14,7 +14,7 @@
 <style>
 </style>
 </head>
-
+<script src="settings.js"></script>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -277,6 +277,32 @@ $(document).ready(function () {
 </body>
 </html>
 
+<!-- Include this script on all pages where you want the settings to apply -->
+<script>
+    // Function to load settings from local storage
+    function loadSettings() {
+        var storedSettings = localStorage.getItem('userSettings');
+
+        if (storedSettings) {
+            var settings = JSON.parse(storedSettings);
+
+            // Apply settings to the page's elements
+            // Example: Apply font size
+            document.body.style.fontSize = settings.fontSize;
+            // Example: Apply contrast
+            if (settings.contrast === 'high') {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+            }
+            // Add more code to apply other settings
+        }
+    }
+
+    // Call the loadSettings function when the page loads
+    window.addEventListener('load', function() {
+        loadSettings();
+    });
+</script>
 
 
 <script>
