@@ -14,7 +14,7 @@
 <style>
 </style>
 </head>
-<script src="settings.js"></script>
+
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -32,12 +32,12 @@
  <div class="menu-content">
   <ul class="menu">
       <li id="menu-title"><img src="your-image-url.png" alt="My Website Logo"></li>
-       <li><a href="#home">Home</a></li>
-       <li><a href="#about">About</a></li>
-       <li><a href="#services">Services</a></li>
-       <li><a href="#contact">Contact</a></li>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="about/about.html">About</a></li>
+       <li><a href="faq/index.html">FAQ</a></li>
+       <li><a href="contact/index.html">Contact</a></li>
        <li class="menu-button"><a href="login/index.html">Login</a></li>
-       <li class="menu-button2"><a href="#signup">Signup</a></li>
+       <li class="signup/index.hthml"><a href="#signup">Signup</a></li>
        <li class="menu-button2"><a href="settings/index.html">Settings</a></li>
        <!-- Add more menu items as needed -->
        <!-- Search bar within the menu -->
@@ -243,10 +243,6 @@ $(document).ready(function () {
 </head>
 <body style="background-color:white;">
 
-<h2>Hoverable Dropup</h2>
-<p>Example text...</p>
-<p>Example text...</p>
-<p>Move the mouse over the button to open the dropup menu.</p>
 
 <div class="dropup">
     <button class="dropbtn">Accessibility Options</button>
@@ -273,7 +269,7 @@ $(document).ready(function () {
     </div>
 </div>
 
-
+<script src="settings.js"></script>
 </body>
 </html>
 
@@ -303,6 +299,18 @@ $(document).ready(function () {
         loadSettings();
     });
 </script>
+
+<script>
+    // Load and apply settings when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        loadSettings();
+    });
+</script>
+
+
+
+
+
 
 
 <script>
@@ -623,6 +631,16 @@ const forumData = [
     },
     // Add more forum posts here
 ];
+</script>
+
+<!-- Include this script on all other pages where you want the settings to be applied -->
+<script src="settings.js"></script>
+
+<script>
+    // Load and apply settings when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        loadSettings();
+    });
 </script>
 
 <script>

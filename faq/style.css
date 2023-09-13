@@ -1,0 +1,276 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script", cursive;
+}
+.w3-bar, h1, button {
+  font-family:
+}
+.fa-anchor, .fa-coffee {
+  font-size: 200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add your global styles here */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: red
+
+    color: ; /* Text color */
+}
+
+ul.menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: #333; /* Background color for the menu bar */
+          overflow: hidden;
+      }
+
+      ul.menu li {
+          float: left;
+      }
+
+      ul.menu li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+p {
+  color:red
+}
+      ul.menu li a:hover {
+          background-color: #555; /* Background color for menu items on hover */
+      }
+
+      /* Style for the search bar */
+       #search-container {
+           float: right;
+           margin-right: 20px;
+           margin-top: 10px;
+       }
+
+       #search-bar {
+           padding: 5px;
+           border: none;
+           border-radius: 4px;
+       }
+       /* Style for the image title */
+      #menu-title {
+          float: left;
+          margin-left: 20px;
+          margin-top: 5px; /* Adjust the top margin to align with the menu items */
+      }
+
+
+      /* The side navigation menu */
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+
+      /* Sidebar links */
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      /* Active/current link */
+      .sidebar a.active {
+        background-color: black;
+        color: white;
+      }
+
+      /* Links on mouse-over */
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+          .sidebar-right a {
+              text-align: center;
+              float: none;
+          }
+      }
+
+.menu-content {
+    background-color: #333; /* Background color for the menu */
+    color: #fff; /* Text color for the menu */
+    padding: 10px;
+}
+
+/* Define the styles for the inverted colors */
+.invert {
+    filter: invert(100%);
+    background-color: #000; /* Background color for inverted content */
+    color: #fff; /* Text color for inverted content */
+}
+
+.saturation {
+    filter: saturate(100%);
+    background-color: #FFC107; /* Custom background color for saturated content */
+    color: #333; /* Custom text color for saturated content */
+}
+
+h3 {
+  margin-top: 5%;
+}
+
+p {
+  color:red
+}
+
+#filter-element {
+  margin-left: 45%;
+  margin-top: 3%;
+}
+/* Inverted colors */
+body.invert {
+    background-color: black;
+    color: white; /* Inverted text color */
+}
+
+/* Default styles for light theme */
+body.light {
+    font-size: 16px;
+    color: black; /* Default text color for light theme */
+    background-color: white; /* Default background color for light theme */
+}
+
+/* Styles for dark theme */
+body.dark {
+    font-size: 16px;
+    color: white; /* Default text color for dark theme */
+    background-color: black; /* Default background color for dark theme */
+}
+
+
+
+#increase-font-btn {
+  visibility: collapse;
+
+}
+
+#decrease-font-btn {
+  visibility: collapse;
+
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#invert-select {
+  margin-right: 3%;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+#menu-title img {
+    width: 100px; /* Adjust the logo width */
+}
+
+#search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+label {
+    font-weight: bold;
+    color:grey
+}
+
+p {
+  color:grey
+}
+
+#saturation-up-btn {
+  visibility: hidden;
+}
+
+#saturation-down-btn {
+  visibility: hidden;
+}
+
+select,
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444; /* Button background color on hover */
+}
+
+/* Default (light) theme */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
+}
+
+/* Dark theme */
+body.dark-theme {
+    --background-color: #333;
+    --text-color: #fff;
+    --button-bg-color: #fff;
+    --button-text-color: #333;
+}
+
+/* Apply theme-specific styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}

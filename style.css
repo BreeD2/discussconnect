@@ -830,3 +830,156 @@ a {
    .dropup:hover .dropbtn {
      background-color: #2980B9;
    }
+
+
+   /* Define the styles for the inverted colors */
+.invert {
+    filter: invert(100%);
+    background-color: #000; /* Background color for inverted content */
+    color: #fff; /* Text color for inverted content */
+}
+
+.saturation {
+    filter: saturate(100%);
+    background-color: #FFC107; /* Custom background color for saturated content */
+    color: #333; /* Custom text color for saturated content */
+}
+
+#filter-element {
+  margin-left: 45%;
+  margin-top: 3%;
+}
+/* Inverted colors */
+body.invert {
+    background-color: black;
+    color: white; /* Inverted text color */
+}
+
+/* Default styles for light theme */
+body.light {
+    font-size: 16px;
+    color: black; /* Default text color for light theme */
+    background-color: white; /* Default background color for light theme */
+}
+
+/* Styles for dark theme */
+body.dark {
+    font-size: 16px;
+    color: white; /* Default text color for dark theme */
+    background-color: black; /* Default background color for dark theme */
+}
+
+
+
+#increase-font-btn {
+  visibility: collapse;
+
+}
+
+#decrease-font-btn {
+  visibility: collapse;
+
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#invert-select {
+  margin-right: 3%;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+#menu-title img {
+    width: 100px; /* Adjust the logo width */
+}
+
+#search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+label {
+    font-weight: bold;
+    color:grey
+}
+
+p {
+  color:grey
+}
+
+#saturation-up-btn {
+  visibility: hidden;
+}
+
+#saturation-down-btn {
+  visibility: hidden;
+}
+
+select,
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444; /* Button background color on hover */
+}
+
+/* Default (light) theme */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
+}
+
+/* Dark theme */
+body.dark-theme {
+    --background-color: #333;
+    --text-color: #fff;
+    --button-bg-color: #fff;
+    --button-text-color: #333;
+}
+
+/* Apply theme-specific styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
