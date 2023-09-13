@@ -123,12 +123,27 @@ $(document).ready(function () {
          <h2>Latest Forum Posts</h2>
          <div class="forum-post">
              <h3 class="post-title">How to get started with our community?</h3>
-             <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida libero a libero sodales, quis laoreet mi finibus.</p>
+             <p class="post-content">This is my first post...</p>
              <p class="post-author">Posted by: JohnDoe</p>
+             <div class="post-feedback">
+          <a href="#" class="like-button" data-vote="0">Like</a>
+          <span class="like-count"></span>
+          <a href="#" class="dislike-button" data-vote="0">Dislike</a>
+          <span class="dislike-count"></span>
+      </div>
+  </div>
          </div>
+         <form action="processpost.php" method="post" enctype="multipart/form-data">
+    <!-- Existing fields like title, content, etc. -->
+
+    <label for="file">Attach File:</label>
+    <input type="file" name="file" id="file">
+
+    <button type="submit">Submit Post</button>
+</form>
          <div class="forum-post">
              <h3 class="post-title">Best practices for online discussions</h3>
-             <p class="post-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+             <p class="post-content">Hi</p>
              <p class="post-author">Posted by: JaneSmith</p>
          </div>
 </div>
@@ -342,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <main>
        <section>
-      
+
        </section>
    </main>
 
@@ -569,13 +584,11 @@ function updateBrightness() {
 <script>
 const forumData = [
     {
-        title: "How to get started with our community?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida libero a libero sodales, quis laoreet mi finibus.",
+        title: "This is my first post...",
         author: "JohnDoe"
     },
     {
-        title: "Best practices for online discussions",
-        content: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        title: "Hi, ...",
         author: "JaneSmith"
     },
     // Add more forum posts here
@@ -1011,4 +1024,49 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+</script>
+
+<script>
+const likeButtons = document.querySelectorAll('.like-button');
+const dislikeButtons = document.querySelectorAll('.dislike-button');
+
+likeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const vote = parseInt(button.getAttribute('data-vote'));
+
+        if (vote === 0) {
+            // User hasn't voted yet
+            button.setAttribute('data-vote', '1');
+
+            // Increment the like count
+            const likeCount = button.nextElementSibling;
+            likeCount.textContent = (parseInt(likeCount.textContent) || 0) + 1;
+
+            // Disable the dislike button
+            const dislikeButton = button.parentElement.querySelector('.dislike-button');
+            dislikeButton.style.pointerEvents = 'none';
+        }
+    });
+});
+
+dislikeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const vote = parseInt(button.getAttribute('data-vote'));
+
+        if (vote === 0) {
+            // User hasn't voted yet
+            button.setAttribute('data-vote', '1');
+
+            // Increment the dislike count
+            const dislikeCount = button.nextElementSibling;
+            dislikeCount.textContent = (parseInt(dislikeCount.textContent) || 0) + 1;
+
+            // Disable the like button
+            const likeButton = button.parentElement.querySelector('.like-button');
+            likeButton.style.pointerEvents = 'none';
+        }
+    });
+});
+
+
 </script>
