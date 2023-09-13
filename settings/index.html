@@ -35,61 +35,47 @@
 
    </ul>
  </div>
+ <div id="filter-element">Settings</div>
 
-    <!-- Add this button inside the <body> section of your HTML -->
-    <!-- Add this button inside the <body> section of your HTML -->
-<div id="filter-element">Settings</div>
+     <label for="font-size">Font Size:</label>
+     <input type="number" id="font-size" value="16">
+     <br>
+     <label for="theme">Theme:</label>
+     <select id="theme">
+         <option value="light">Light</option>
+         <option value="dark">Dark</option>
+     </select>
+     <br>
 
+     <label for="invert-select">Invert Colors:</label>
+     <select id="invert-select">
+         <option value="yes">Yes</option>
+         <option value="no">No</option>
+     </select>
+     <input type="checkbox" id="invert-checkbox">
 
-    <label for="font-size">Font Size:</label>
-        <input type="number" id="font-size" value="16"color>
-        <br>
-        <label for="theme">Theme:</label>
-        <select id="theme">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-        <br>
+     <!-- Contrast Buttons -->
+     <button id="contrast-up-btn">Increase Contrast</button>
+     <button id="contrast-down-btn">Decrease Contrast</button>
 
-        <label for="invert-select">Invert Colors:</label>
-<select id="invert-select">
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-</select>
-<input type="checkbox" id="invert-checkbox">
-<!-- Contrast Buttons -->
-<button id="contrast-up-btn">Increase Contrast</button>
-<button id="contrast-down-btn">Decrease Contrast</button>
+     <!-- Saturation Buttons -->
+     <button id="saturation-up-btn">Increase Saturation</button>
+     <button id="saturation-down-btn">Decrease Saturation</button>
 
-<!-- Saturation Buttons -->
-<button id="saturation-up-btn">Increase Saturation</button>
-<button id="saturation-down-btn">Decrease Saturation</button>
+     <!-- Blur Buttons -->
+     <button id="blur-up-btn">Increase Blur</button>
+     <button id="blur-down-btn">Decrease Blur</button>
 
-<!-- Blur Buttons -->
-<button id="blur-up-btn">Increase Blur</button>
-<button id="blur-down-btn">Decrease Blur</button>
+     <!-- Add an element that you want to apply the filter to -->
+     <div class="theme-body" id="theme-body2">
+         <!-- Your page content goes here -->
+         <p>This is your page content.</p>
+     </div>
 
+     <button id="save-settings">Save Settings</button>
 
-
-
-<!-- Add an element that you want to apply the filter to -->
-
-
-<!-- Add buttons to apply different filter styles -->
-<!-- Add buttons to apply different filter styles -->
-
-
-
-
-        <button id="save-settings">Save Settings</button>
-
-   <div class="theme-body" id="theme-body2">
-       <!-- Your page content goes here -->
-       <p>This is your page content.</p>
-   </div>
-
-    <!-- Include your JavaScript files here -->
-    <script src="settings.js"></script>
-    <!-- Add any other JavaScript files you need -->
+     <!-- Include your JavaScript files here -->
+     <script src="settings.js"></script>
+    
 </body>
 </html>

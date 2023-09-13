@@ -16,13 +16,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <script src="settings.js"></script> <!-- Include the shared settings.js file -->
+ <script src="..//settings/settings.js"></script> <!-- Include the shared settings.js file -->
 <style>
 </style>
 </head>
-
-
-
+<script>
+console.log('Script is running'); // Check if the script is running
+</script>
 
 <div class="menu-content">
   <ul class="menu">
@@ -59,7 +59,7 @@
 
  </div>
 
-    <script src="script.js"></script>
+
 </body>
 </html>
 
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-<script>
+
         document.addEventListener("DOMContentLoaded", function () {
             // Load the selected theme and font size from local storage
             const savedTheme = localStorage.getItem("theme");
@@ -148,4 +148,180 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     </script>
+
+    <script>
+       // Function to apply the font size to the body
+       function applyFontSize(fontSize) {
+           document.body.style.fontSize = fontSize + 'px';
+           localStorage.setItem('font-size', fontSize);
+       }
+
+       // Function to toggle between light and dark themes
+       function toggleTheme() {
+           const body = document.body;
+           const themeSelect = document.getElementById('theme');
+
+           // Check the selected theme
+           if (themeSelect.value === 'dark') {
+               body.classList.add('dark-theme'); // Apply the dark theme
+           } else {
+               body.classList.remove('dark-theme'); // Apply the light theme
+           }
+
+           // Update the theme in local storage
+           localStorage.setItem('theme', themeSelect.value);
+       }
+
+       // Function to change the font size
+       function changeFontSize(amount) {
+           const fontSizeInput = document.getElementById('font-size');
+           let currentSize = parseInt(fontSizeInput.value);
+
+           // Check if the input value is a valid number
+           if (!isNaN(currentSize)) {
+               currentSize += amount; // Adjust the font size by the specified amount
+               currentSize = Math.max(8, currentSize); // Ensure the font size doesn't go below 8
+               fontSizeInput.value = currentSize; // Update the input value
+               document.body.style.fontSize = currentSize + 'px'; // Apply the font size
+           }
+       }
+
+       // Add a change event listener to the theme select
+       const themeSelect = document.getElementById('theme');
+       themeSelect.addEventListener('change', toggleTheme);
+
+       // Initialize settings based on local storage (if available)
+       document.addEventListener('DOMContentLoaded', function () {
+           const savedFontSize = localStorage.getItem('font-size');
+           const savedTheme = localStorage.getItem('theme');
+
+           if (savedFontSize) {
+               document.getElementById('font-size').value = savedFontSize;
+               applyFontSize(savedFontSize);
+           }
+
+           if (savedTheme) {
+               themeSelect.value = savedTheme;
+               toggleTheme();
+           }
+       });
+
+       // Function to save settings to local storage
+       function saveSettings() {
+           const fontSize = document.getElementById('font-size').value;
+           const theme = themeSelect.value;
+
+           // Save settings to local storage
+           localStorage.setItem('font-size', fontSize);
+           localStorage.setItem('theme', theme);
+
+           alert('Settings saved!');
+       }
+   </script>
+
+   <script>
+      // Function to toggle between normal and inverted colors
+      function toggleInvert() {
+          const body = document.body;
+          const invertCheckbox = document.getElementById('invert-checkbox');
+
+          // Check if the checkbox is checked
+          if (invertCheckbox.checked) {
+              body.classList.add('invert'); // Add the 'invert' class
+          } else {
+              body.classList.remove('invert'); // Remove the 'invert' class
+          }
+
+          // Update the invert state in local storage
+          const isInvert = body.classList.contains('invert');
+          localStorage.setItem('invert', isInvert ? 'true' : 'false');
+      }
+
+      // Add a change event listener to the checkbox
+      document.getElementById('invert-checkbox').addEventListener('change', toggleInvert);
+  </script>
+
+  <script>
+       // Function to change contrast
+       function changeContrast(value) {
+           const currentContrast = parseFloat(document.body.style.filter?.match(/contrast\((\d+)%\)/)?.[1] || 100);
+           const newContrast = currentContrast + value;
+
+           // Ensure contrast stays within a valid range (0% to 200%)
+           if (newContrast >= 0 && newContrast <= 200) {
+               document.body.style.filter = `contrast(${newContrast}%)`;
+               localStorage.setItem('contrast', newContrast);
+           }
+       }
+
+       // Function to change saturation
+       function changeSaturation(value) {
+           const currentSaturation = parseFloat(document.body.style.filter?.match(/saturate\((\d+)%\)/)?.[1] || 100);
+           const newSaturation = currentSaturation + value;
+
+           // Ensure saturation stays within a valid range (0% to 200%)
+           if (newSaturation >= 0 && newSaturation <= 200) {
+               document.body.style.filter = `saturate(${newSaturation}%)`;
+               localStorage.setItem('saturation', newSaturation);
+           }
+       }
+
+       // Function to change blur
+       function changeBlur(value) {
+           const currentBlur = parseFloat(document.body.style.filter?.match(/blur\((\d+)px\)/)?.[1] || 0);
+           const newBlur = currentBlur + value;
+
+           // Ensure blur stays within a valid range (0px to 10px)
+           if (newBlur >= 0 && newBlur <= 10) {
+               document.body.style.filter = `blur(${newBlur}px)`;
+               localStorage.setItem('blur', newBlur);
+           }
+       }
+
+       // Add event listeners to the contrast buttons
+       document.getElementById('contrast-up-btn').addEventListener('click', function () {
+           changeContrast(10); // Increase contrast by 10%
+       });
+
+       document.getElementById('contrast-down-btn').addEventListener('click', function () {
+           changeContrast(-10); // Decrease contrast by 10%
+       });
+
+       // Add event listeners to the saturation buttons
+       document.getElementById('saturation-up-btn').addEventListener('click', function () {
+           changeSaturation(10); // Increase saturation by 10%
+       });
+
+       document.getElementById('saturation-down-btn').addEventListener('click', function () {
+           changeSaturation(-10); // Decrease saturation by 10%
+       });
+
+       // Add event listeners to the blur buttons
+       document.getElementById('blur-up-btn').addEventListener('click', function () {
+           changeBlur(1); // Increase blur by 1px
+       });
+
+       document.getElementById('blur-down-btn').addEventListener('click', function () {
+           changeBlur(-1); // Decrease blur by 1px
+       });
+
+       // Initialize settings based on local storage (if available)
+       document.addEventListener('DOMContentLoaded', function () {
+           const savedContrast = localStorage.getItem('contrast');
+           const savedSaturation = localStorage.getItem('saturation');
+           const savedBlur = localStorage.getItem('blur');
+
+           if (savedContrast) {
+               document.body.style.filter = `contrast(${savedContrast}%)`;
+           }
+
+           if (savedSaturation) {
+               document.body.style.filter = `saturate(${savedSaturation}%)`;
+           }
+
+           if (savedBlur) {
+               document.body.style.filter = `blur(${savedBlur}px)`;
+           }
+       });
+   </script>
 </script>

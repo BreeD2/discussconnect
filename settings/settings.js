@@ -1,5 +1,3 @@
-
-
 // Function to apply the font size to the body
 function applyFontSize(fontSize) {
     document.body.style.fontSize = fontSize + 'px';
